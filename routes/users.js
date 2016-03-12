@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
       // TODO: tokens should be set by OAuth2 client.
       oauth2Client.setCredentials(tokens);
       // retrieve user profile
-      plus.people.get({ userId: 'crowjdh@gmail.com', auth: oauth2Client }, function(err, profile) {
+      plus.people.get({ userId: 'me', auth: oauth2Client }, function(err, profile) {
           if (err) {
             console.log('An error occured', err);
             return;
