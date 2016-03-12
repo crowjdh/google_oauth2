@@ -10,7 +10,7 @@ var plus = google.plus('v1');
 // https://code.google.com/apis/console
 var CLIENT_ID = '418620888781-ujqsjs4uo4aq74otmr83ph64nhpmkidg.apps.googleusercontent.com';
 var CLIENT_SECRET = 'XJxQ0tGnps2FCUE3stq2uSYe';
-var REDIRECT_URL = 'https://google-oauth2-test-crowjdh.c9users.io';
+var REDIRECT_URL = 'https://nameless-tor-57749.herokuapp.com';
 
 var oauth2Client = new OAuth2Client(CLIENT_ID, CLIENT_SECRET, REDIRECT_URL);
 
