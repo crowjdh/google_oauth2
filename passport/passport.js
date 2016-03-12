@@ -10,7 +10,13 @@ var REDIRECT_URL = 'https://nameless-tor-57749.herokuapp.com/auth/google/callbac
 module.exports.init = function(app) {
     
     // init passport
-    app.use(expressSession({secret: 'mySecretKey'}));
+    app.use(expressSession({
+        secret: 'mySecretKey',
+    	name:   'kaas',
+    	proxy:  true,
+        resave: true,
+        saveUninitialized: true
+    }));
     app.use(passport.initialize());
     app.use(passport.session());
     
