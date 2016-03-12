@@ -3,3 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  p #{message}
+  
+  form(name="token-form", method="get", action="/users.js")
+    div.input
+      span.label Code
+      input(type="text", name="code")
+    div.action
+      input(type="submit", value="Enter")
