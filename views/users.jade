@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  a(href='#{message}') Authenticate
+  
+  form(name="token-form", method="get", action="/users")
+    div.input
+      span.label Code
+      input(type="text", name="code")
+    div.action
+      input(type="submit", value="Enter")

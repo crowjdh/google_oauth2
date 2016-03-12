@@ -19,7 +19,7 @@ router.get('/', function(req, res, next) {
             console.log('An error occured', err);
             return;
           }
-          res.render('index', { title: 'Express', message: profile.displayName + ':' + profile.tagline });
+          res.render('users', { title: 'Express', message: profile.displayName + ':' + profile.tagline });
       });
     });
 });
