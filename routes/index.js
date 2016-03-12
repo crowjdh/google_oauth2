@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
     access_type: 'offline', // will return a refresh token
     scope: 'https://www.googleapis.com/auth/plus.me' // can be a space-delimited string or an array of scopes
   });
-  res.render('index', { title: 'Express', message: 'Visit:\n' + url });
+  res.render('index', { title: 'Express', message: url });
 });
 
 module.exports = router;
