@@ -9,8 +9,7 @@ var oauth2Client = require('../model/MyOAuth2Client');
 /* GET users listing. */
 router.get('/', function(req, res, next) {
     // request access token
-    console.log(req.params.code);
-    oauth2Client.getToken(req.params.code, function(err, tokens) {
+    oauth2Client.getToken(req.query.code, function(err, tokens) {
       // set tokens to the client
       // TODO: tokens should be set by OAuth2 client.
       oauth2Client.setCredentials(tokens);
