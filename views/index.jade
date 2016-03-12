@@ -3,7 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
-  p #{message}
+  a(href='#{message}') Authenticate
   
   form(name="token-form", method="get", action="/users")
     div.input
