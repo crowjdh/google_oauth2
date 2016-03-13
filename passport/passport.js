@@ -7,13 +7,10 @@ var CLIENT_SECRET = 'XJxQ0tGnps2FCUE3stq2uSYe';
 // var REDIRECT_URL = 'https://nameless-tor-57749.herokuapp.com/users';
 var REDIRECT_URL = 'https://nameless-tor-57749.herokuapp.com/auth/google/callback';
 
-module.exports.init = function(app) {
-    
+module.exports.init = function(app, key) {
     // init passport
     app.use(expressSession({
-        secret: 'mySecretKey',
-    	name:   'kaas',
-    	proxy:  true,
+        secret: key,
         resave: true,
         saveUninitialized: true
     }));
